@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- owl carasouel links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- silk js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      .nSelect {
+        background-color: transparent;
+        border: none;
+      }
+      .f1 {
+        font-family: "Heebo";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        display: flex;
+        align-items: center;
+
+        /* Orange */
+
+        color: #f18522;
+      }
+      .snavLink {
+        border-bottom: 0.5px solid #6c728b;
+        background: transparent;
+      }
+      .mainbg {
+        background: #f1f4ff;
+        border-top: 12px solid #f18522;
+      }
+      .f2 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 40px;
+        /* or 111% */
+
+        display: flex;
+
+        letter-spacing: -0.9px;
+        text-transform: capitalize;
+
+        color: #ffffff;
+        border-left: 6px solid #f18522;
+        margin-top: 120px !important;
+      }
+      .sBox {
+        background: rgba(217, 217, 217, 0.1);
+        border: 0.5px solid #1d46f5;
+        backdrop-filter: blur(9px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 30px;
+      }
+      .search {
+        background: #ffffff;
+        border-radius: 6px;
+        width: 100%;
+      }
+      .sInp {
+        border: none;
+        outline: none !important;
+      }
+      .sBtn {
+        background: #f18522;
+        border-radius: 6px;
+        color: #ffffff;
+      }
+      .f3 {
+        font-family: "Heebo";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        /* identical to box height, or 154% */
+
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+      .cata {
+        font-family: "Heebo";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 16px;
+        /* identical to box height, or 145% */
+
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 40px;
+      }
+      .bgWhite {
+        width: 820px;
+        height: 474px;
+        left: 313px;
+        top: 706px;
+
+        background: #ffffff;
+        /* Shadow One */
+
+        box-shadow: 0px 15px 50px -1px rgba(145, 145, 145, 0.25);
+      }
+      .owlC .item {
+            margin: 5px;
+            display: flex;
+        }
+        .card {
+            /* width: 150px; */
+            /* height: 300px; */
+        }
+        .suggestContainer{
+          background-color: #F59E0B;
+        }
+        .digimContainer{
+          background: #B7C4FC;
+        }
+        .carousel-nav-left,
+.carousel-nav-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  /* background-color: #f5f5f5; */
+  /* border-radius: 50%; */
+  /* font-size: 24px; */
+  /* color: #333; */
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.carousel-nav-left {
+  left: 0px;
+  display: block !important;
+}
+
+.carousel-nav-right {
+  right: -35px;
+  display: block !important;
+}
+.f1{
+  color: #FFF;
+/* Title 2 */
+font-size: 32px;
+font-family: Inter;
+font-weight: 700;
+line-height: 24px;
+}
+.f4{
+  color: #6B7280;
+font-size: 13px;
+font-family: Heebo;
+font-weight: 800;
+line-height: 19.5px;
+letter-spacing: 0.325px;
+}
+.f5{
+  color: #1F2937;
+font-size: 15px;
+font-family: Heebo;
+font-weight: 700;
+line-height: 22px
+}
+.f6{
+  color: #F59E0B;
+font-size: 13px;
+font-family: Heebo;
+font-weight: 900;
+line-height: 19.5px;
+letter-spacing: 1.3px;
+}
+.f7{
+  color: #9CA3AF;
+font-size: 13px;
+font-family: Heebo;
+line-height: 19.5px;
+}
+.f10{
+  color: #1A1A1A;
+text-align: right;
+font-size: 15px;
+font-family: Heebo;
+font-weight: 900;
+line-height: 20px;
+letter-spacing: 0.8px;
+}
+.f9{
+  color: #8F9095;
+font-size: 9px;
+font-family: Heebo;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+.cardFooter{
+  border-radius: 0px 0px 6px 6px;
+border-top: 1px solid #F9FAFB;
+background: #FDFDFD;
+}
+.protContainer{
+  background-color: #F1F4FF;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/images/logo.png" alt="" width="140px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-5 ps-3" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <select class="form-select nSelect" aria-label="Select Option">
+                <option selected>Explore</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="#">Become A Seller</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-between">
+            <a class="nav-link f1" href="#">My Account</a>
+            <a class="nav-link ms-4" href="#">
+              <img src="./assets/images/cartlogo.png" alt="" />
+            </a>
+            <div class="d-flex mx-3">
+              <img
+                src="./assets/images/earthsvg.png"
+                alt=""
+                width="25px"
+                height="25px"
+              />
+              <p class="ms-3">English</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- main container -->
+    <div class="container-fluid mainbg">
+      <div class="row">
+        <!-- side links -->
+        <div class="col-md-3 mx-0 px-0">
+          <div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link"> Graphics & Design </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link"> Digital Marketing </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link">Writing & Translation </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link"> Video & Animation </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link">Music & Audio </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link">Programming & Tech </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link">Business </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link">Lifestyle </a>
+            </div>
+            <div class="snavLink d-flex justify-content-center py-3 ms-0">
+              <a href="" class="nav-link">Data </a>
+            </div>
+          </div>
+        </div>
+        <!-- side links end -->
+        <!-- carasouel -->
+        <div class="col-md-9">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="./assets/images/c1.png" alt="Image 1" />
+              <div class="carousel-caption">
+                <p class="f2 ps-3">
+                  Find best Freelance <br />
+                  services for your business
+                </p>
+                <div class="sBox py-3 px-5">
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <div class="search d-flex align-items-center p-3">
+                        <span>
+                          <svg
+                            width="21"
+                            height="20"
+                            viewBox="0 0 21 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.5 3.99997C7.43913 3.99997 6.42172 4.4214 5.67157 5.17155C4.92143 5.92169 4.5 6.93911 4.5 7.99997C4.5 9.06084 4.92143 10.0783 5.67157 10.8284C6.42172 11.5785 7.43913 12 8.5 12C9.56087 12 10.5783 11.5785 11.3284 10.8284C12.0786 10.0783 12.5 9.06084 12.5 7.99997C12.5 6.93911 12.0786 5.92169 11.3284 5.17155C10.5783 4.4214 9.56087 3.99997 8.5 3.99997ZM2.5 7.99997C2.49988 7.05568 2.72264 6.12468 3.15017 5.28271C3.5777 4.44074 4.19792 3.71157 4.9604 3.1545C5.72287 2.59743 6.60606 2.22819 7.53815 2.07681C8.47023 1.92543 9.42488 1.99618 10.3245 2.28332C11.224 2.57046 12.0432 3.06587 12.7152 3.72927C13.3872 4.39266 13.8931 5.20531 14.1919 6.10111C14.4906 6.9969 14.5737 7.95056 14.4343 8.88452C14.295 9.81848 13.9372 10.7064 13.39 11.476L18.207 16.293C18.3892 16.4816 18.49 16.7342 18.4877 16.9964C18.4854 17.2586 18.3802 17.5094 18.1948 17.6948C18.0094 17.8802 17.7586 17.9854 17.4964 17.9876C17.2342 17.9899 16.9816 17.8891 16.793 17.707L11.977 12.891C11.0794 13.5293 10.0233 13.9081 8.92468 13.9861C7.826 14.0641 6.72707 13.8381 5.7483 13.3329C4.76953 12.8278 3.94869 12.063 3.37572 11.1223C2.80276 10.1816 2.49979 9.10141 2.5 7.99997Z"
+                              fill="#6B7280"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control sInp"
+                          id="exampleInput"
+                          placeholder="What service are you looking for today?"
+                        />
+                      </div>
+                      <button class="btn sBtn py-3 px-5 ms-2">Search</button>
+                    </div>
+                    <div class="my-3 d-flex justify-content-between">
+                      <p class="f3">popular:</p>
+                      <p class="cata py-2 px-3">Business</p>
+                      <p class="cata py-2 px-3">Programming & Tech</p>
+                      <p class="cata py-2 px-3">Data</p>
+                      <p class="cata py-2 px-3">Lifestyle</p>
+                      <p class="cata py-2 px-3">Digital Marketing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/images/c1.png" alt="Image 1" />
+              <div class="carousel-caption">
+                <p class="f2 ps-3">
+                  Find best Freelance <br />
+                  services for your business
+                </p>
+                <div class="sBox py-3 px-5">
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <div class="search d-flex align-items-center p-3">
+                        <span>
+                          <svg
+                            width="21"
+                            height="20"
+                            viewBox="0 0 21 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.5 3.99997C7.43913 3.99997 6.42172 4.4214 5.67157 5.17155C4.92143 5.92169 4.5 6.93911 4.5 7.99997C4.5 9.06084 4.92143 10.0783 5.67157 10.8284C6.42172 11.5785 7.43913 12 8.5 12C9.56087 12 10.5783 11.5785 11.3284 10.8284C12.0786 10.0783 12.5 9.06084 12.5 7.99997C12.5 6.93911 12.0786 5.92169 11.3284 5.17155C10.5783 4.4214 9.56087 3.99997 8.5 3.99997ZM2.5 7.99997C2.49988 7.05568 2.72264 6.12468 3.15017 5.28271C3.5777 4.44074 4.19792 3.71157 4.9604 3.1545C5.72287 2.59743 6.60606 2.22819 7.53815 2.07681C8.47023 1.92543 9.42488 1.99618 10.3245 2.28332C11.224 2.57046 12.0432 3.06587 12.7152 3.72927C13.3872 4.39266 13.8931 5.20531 14.1919 6.10111C14.4906 6.9969 14.5737 7.95056 14.4343 8.88452C14.295 9.81848 13.9372 10.7064 13.39 11.476L18.207 16.293C18.3892 16.4816 18.49 16.7342 18.4877 16.9964C18.4854 17.2586 18.3802 17.5094 18.1948 17.6948C18.0094 17.8802 17.7586 17.9854 17.4964 17.9876C17.2342 17.9899 16.9816 17.8891 16.793 17.707L11.977 12.891C11.0794 13.5293 10.0233 13.9081 8.92468 13.9861C7.826 14.0641 6.72707 13.8381 5.7483 13.3329C4.76953 12.8278 3.94869 12.063 3.37572 11.1223C2.80276 10.1816 2.49979 9.10141 2.5 7.99997Z"
+                              fill="#6B7280"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control sInp"
+                          id="exampleInput"
+                          placeholder="What service are you looking for today?"
+                        />
+                      </div>
+                      <button class="btn sBtn py-3 px-5 ms-2">Search</button>
+                    </div>
+                    <div class="my-3 d-flex justify-content-between">
+                      <p class="f3">popular:</p>
+                      <p class="cata py-2 px-3">Business</p>
+                      <p class="cata py-2 px-3">Programming & Tech</p>
+                      <p class="cata py-2 px-3">Data</p>
+                      <p class="cata py-2 px-3">Lifestyle</p>
+                      <p class="cata py-2 px-3">Digital Marketing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more carousel items here -->
+          </div>
+        </div>
+      </div>
+      <!-- featured catagorie section -->
+      <div class="row">
+        <div class="col-md-12  mt-5 position-relative">
+          <!-- <div class="bgWhite my-3 bg-dark position-absolute"> </div> -->
+         
+    
+            
+          </div>
+        </div>
+        <!-- featured catagorie section end -->
+        <!-- top seller section -->
+        <div class="row top"></div>
+        <!-- top seller section end -->
+      </div>
+    </div>
+    <!-- end main container -->
+    <!-- suggestContainer -->
+    <div class="container-fluid suggestContainer py-5 ps-2 pe-5">
+    
+    <div class="container">
+      <p class="text-center my-5 f1">SELECTED GIGS FOR YOU</p>
+      <div class="owl-carousel-1 ps-5 py-3  " id="owl-carouse">
+        <div class="item mx-2">
+          <div class="card">
+            <img src="./assets/images/i1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+             
+            </div>
+          </div>
+        </div>
+        <div class="item mx-2">
+          <div class="card">
+            <img src="./assets/images/i2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+        <div class="item mx-2">
+          <div class="card">
+            <img src="./assets/images/i3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="item mx-2">
+          <div class="card">
+            <img  src="./assets/images/i4.png" class="card-img-top" alt="...">
+            <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item mx-2">
+          <div class="card">
+            <img src="./assets/images/i3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="item mx-2">
+          <div class="card">
+            <img src="./assets/images/i2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+      <div class="item mx-2">
+        <div class="card">
+          <img src="./assets/images/i4.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-body">
+             <div class="d-flex align-items-center">
+              <img src="./assets/images/prop.png" alt="" width="25px">
+             <div class="ms-2 d-flex mt-2 pt-2">
+              <p class="f4">EdwardHendrix</p>
+              <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+             </div>
+             </div>
+             <p class="f5">Design a modern and
+              professional white paper</p>
+              <div class="d-flex">
+                <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                <p class="f6 mx-1">N/A</p>
+                <p class="f7">(0)</p>
+              </div>
+            </div>
+            <div class="cardFooter px-3">
+              <div class="d-flex justify-content-between">
+                <img src="./assets//images/heart.png" alt="" height="20px">
+                <div>
+                  <p class="f9">Starting at</p>
+                  <p class="f10">$8.99</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <!-- Add more cards here -->
+    </div>
+    </div>
+
+    </div>
+    <!-- suggest container ends -->
+     <!-- digitial marketing container -->
+     <div class="container-fluid digimContainer py-5 ps-2 pe-5">
+    
+      <div class="container">
+        <p class="text-center my-5 f1">Digitial Marketing</p>
+        <div class="owl-carousel-1 ps-5 py-3  " id="owl-carouse">
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pd1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Setup an effective google ads
+                adwords ppc campaigns</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pd2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Create a video to promote your
+                affiliate offer</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pd3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Mentor you on how to self publish
+                your book</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/pd4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Create a winning display ads
+                strategy</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Add more cards here -->
+      </div>
+      </div>
+  
+      </div>
+      <!-- digitial marketing end -->
+         <!-- programming and tech container -->
+     <div class="container-fluid protContainer py-5 ps-2 pe-5">
+    
+      <div class="container">
+        <p class="text-center my-5 f1 text-black">Programming & Tech</p>
+        <div class="owl-carousel-2 ps-5 py-3  " id="owl-carouse">
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pt1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Test your game, give footage and
+                detailed feedback</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pt2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Create nft minting website on
+                solana blockchain</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pt3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Test and review your website or
+                app for bugs, usability, UI, UX</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/pt4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Review your website and suggest
+                improvements</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pt3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Test and review your website or
+                app for bugs, usability, UI, UX</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+      </div>
+      </div>
+  
+      </div>
+      <!-- programming and tech end -->
+       <!--Writing & Translation container -->
+     <div class="container-fluid digimContainer py-5 ps-2 pe-5">
+    
+      <div class="container">
+        <p class="text-center my-5 f1">Writing & Translation</p>
+        <div class="owl-carousel-1 ps-5 py-3  " id="owl-carouse">
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/wt1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Write killer ad copy for your
+                facebook ad</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/wt2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Create an engaging ad copy for
+                your facebook ad</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/pd3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Mentor you on how to self publish
+                your book</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/wt3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Transcribe 60 minutes of audio or
+                video in 24hrs</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/wt4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Do 90 mins of audio or video
+                transcription in 24 hours</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+      </div>
+      </div>
+  
+      </div>
+      <!-- Writing & Translation end -->
+
+        <!-- data container -->
+     <div class="container-fluid protContainer py-5 ps-2 pe-5">
+    
+      <div class="container">
+        <p class="text-center my-5 f1 text-black">Data</p>
+        <div class="owl-carousel-2 ps-5 py-3  " id="owl-carouse">
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/d1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Transcribe your PDF in Excel</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/d2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Clean your excel contact
+                database</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/d3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Clean your excel contact
+                database</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/d4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Annotate and label images for ai
+                and machine learning</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/d4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Annotate and label images for ai
+                and machine learning</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          <!-- Add more cards here -->
+      </div>
+      </div>
+  
+      </div>
+      <!-- data end -->
+        <!--Writing & Translation container -->
+     <div class="container-fluid digimContainer py-5 ps-2 pe-5">
+    
+      <div class="container">
+        <p class="text-center my-5 f1">Graphics and Design</p>
+        <div class="owl-carousel-1 ps-5 py-3  " id="owl-carouse">
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/g1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Design professional brochure or
+                booklet in 24 hours</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/g2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Design custom elegant and luxury
+                unique typography</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/g3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Design PSD web template, web
+                mockup, or figma website UI</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/g4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Design a modern and
+                professional white paper</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/wt4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Do 90 mins of audio or video
+                transcription in 24 hours</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+      </div>
+      </div>
+  
+      </div>
+      <!-- Writing & Translation end -->
+       <!-- life style container -->
+     <div class="container-fluid protContainer py-5 ps-2 pe-5">
+    
+      <div class="container">
+        <p class="text-center my-5 f1 text-black">Lifestyle</p>
+        <div class="owl-carousel-2 ps-5 py-3  " id="owl-carouse">
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/l1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Be your teammate in rocket
+                league</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/l2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Sell mm2 godlys, ancients,
+                vintages, ecs</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img src="./assets/images/l3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Create custom exercise videos,
+                workouts and photos</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/l4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Be your personal stylist and
+                shopper</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mx-2">
+            <div class="card">
+              <img  src="./assets/images/d4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex align-items-center">
+                <img src="./assets/images/prop.png" alt="" width="25px">
+               <div class="ms-2 d-flex mt-2 pt-2">
+                <p class="f4">EdwardHendrix</p>
+                <img src="./assets/images/verified.png" alt="" width="20px" height="20px">
+               </div>
+               </div>
+               <p class="f5">Annotate and label images for ai
+                and machine learning</p>
+                <div class="d-flex">
+                  <img src="./assets//images/star.png" alt="" width="20px" height="20px">
+                  <p class="f6 mx-1">N/A</p>
+                  <p class="f7">(0)</p>
+                </div>
+              </div>
+              <div class="cardFooter px-3">
+                <div class="d-flex justify-content-between">
+                  <img src="./assets//images/heart.png" alt="" height="20px">
+                  <div>
+                    <p class="f9">Starting at</p>
+                    <p class="f10">$8.99</p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          <!-- Add more cards here -->
+      </div>
+      </div>
+  
+      </div>
+      <!-- life style end -->
+    <!-- bootstrap cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- owl carasouel cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- owl carasouel scripts -->
+    <!-- silk js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 5000, // Auto move interval in milliseconds (5 seconds in this example)
+          autoplayHoverPause: true, // Pause on mouse hover
+        });
+     
+      });
+     
+      $(document).ready(function() {
+    $('.owl-carousel-1').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      prevArrow: '<span class="carousel-nav-left"><img src="./assets/images/leftc.png"></span>',
+      nextArrow: '<span class="carousel-nav-right"><img src="./assets/images/rightc.png"></span>',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+  });
+  $(document).ready(function() {
+    $('.owl-carousel-2').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      prevArrow: '<span class="carousel-nav-left"><img src="./assets/images/leftc2.png"></span>',
+      nextArrow: '<span class="carousel-nav-right"><img src="./assets/images/rightc2.png"></span>',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+  });
+     
+    </script>
+   
+    
+  </body>
+</html>
